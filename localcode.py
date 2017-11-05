@@ -146,6 +146,9 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
     left_top_coor = get_points(left_slope, left_bias, int(y_size * .6))
     right_bottom_coor = get_points(right_slope, right_bias, y_size)
     right_top_coor = get_points(right_slope, right_bias, int(y_size * .6))
+
+
+
     # draw the lines
     cv2.line(img, left_bottom_coor, left_top_coor, color, 15)
     cv2.line(img, right_bottom_coor, right_top_coor, color, 15)
@@ -185,9 +188,6 @@ def process_image(image):
                          (imshape[1]*0.5, imshape[0]*0.6),(imshape[1], imshape[0])]],
                             dtype=np.int32)
 
-    #     vertices = np.array([[(0, imshape[0]), (int(imshape[1]/2), int(imshape[0]*3/5)),
-    #                           (int(imshape[1]/2), int(imshape[0]*3/5)),(imshape[1], imshape[0])]],
-    #                             dtype=np.int32)
 
     masked_img = region_of_interest(current_image, vertices)
     # now Hough transformation to get the line image
