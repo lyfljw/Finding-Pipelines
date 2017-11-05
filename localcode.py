@@ -79,8 +79,6 @@ def get_points(slope, bias, y):
     return (int((y - bias) / slope), y)
 
 
-
-
 def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
     """
     NOTE: this is the function you might want to use as a starting point once you want to
