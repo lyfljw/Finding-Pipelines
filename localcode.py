@@ -188,7 +188,7 @@ def process_image(image):
                          (imshape[1]*0.5, imshape[0]*0.6),(imshape[1], imshape[0])]],
                             dtype=np.int32)
 
-
+    # create a masked image, all are out of the polygon should be empty
     masked_img = region_of_interest(current_image, vertices)
     # now Hough transformation to get the line image
     line_image_canvas = hough_lines(masked_img, rho, theta, threshold,

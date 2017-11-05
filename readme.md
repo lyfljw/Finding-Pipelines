@@ -21,9 +21,16 @@ The goals / steps of this project are the following:
 
 
 My pipeline consisted of 5 steps. All steps are clearly commented in the code. Here is a brief introduction of the main idea.
-1. Convert the images to gray images.
+0. Define some important parameters for the functions and adjust them later.
+1. Convert the image to gray image.
 2. Apply GaussianBlur on the gray image to reduce some noise
-3. Apply Canny to 
+3. Apply Canny to the image 
+4. define the polygon. I used 
+[(0, imshape[0]), (imshape[1]*0.5, imshape[0]*0.6),(imshape[1]*0.5, imshape[0]*0.6),(imshape[1], imshape[0])] 
+as my vertices to fit all resolution of pictures.
+5. Get a masked image with the polygon area defined in step 4.
+6. Apply Hough transformation on that masked image to find the lines, and draw the lines on an empty canvas.
+7. Merge the canvas with lines and the original image to get a "pipeline highlighted" image.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
