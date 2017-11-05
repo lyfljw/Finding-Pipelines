@@ -98,8 +98,6 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
     If you want to make the lines semi-transparent, think about combining
     this function with the weighted_img() function below
     """
-    line_left = []  # left pipeline has a negative slope
-    line_right = []  # right pipeline has a positive slope
     biases_left = 0
     slopes_left = 0
     total_weight_left = 0.001
