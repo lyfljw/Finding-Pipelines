@@ -37,8 +37,7 @@ In order to draw a single line on the left and right lanes, I modified the `draw
 	1. Add up all the reasonable slopes and biases of each pipeline in the picture with weights.
 	2. regularzation the slopes and biases to get the weight mean. This step will help reduce the influence of some short line segments.
 	3. Using the slope and bias terms found in 2nd step, calculate the bottom and top points' coordinates of both the left and right lines.
-	4. deal with bad image (didn't detect any segments, or only one side lane)
-	4. cv2.line() to draw the line.
+	4. deal with bad image (didn't detect any segments, or only one side lane) and draw the lines.
 
 In order to implement the algorithm, I did
 ##### For step 1 and 2:
