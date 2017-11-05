@@ -32,7 +32,7 @@ as my vertices instead of numbers to fit all resolution of pictures.
 7. Apply Hough transformation on that masked image to find the lines, and draw the lines on an empty canvas.
 8. Merge the canvas with lines and the original image to get a "pipeline highlighted" image.
 
-In order to draw a single line on the left and right lanes, I modified the `draw_lines()` function.  ####Algorithm:
+In order to draw a single line on the left and right lanes, I modified the `draw_lines()` function.  #### Algorithm:
 	1. Add up all the reasonable slopes and biases of each pipeline in the picture with weights.
 	2. regularzation the slopes and biases to get the weight mean. This step will help reduce the influence of some short line segments.
 	3. Using the slope and bias terms found in 2nd step, calculate the bottom and top points' coordinates of both the left and right lines.
